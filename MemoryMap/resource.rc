@@ -1,0 +1,34 @@
+#pragma code_page(65001) // 強制指定使用 UTF-8 編碼
+
+1 ICON "ramr.ico"
+1 24 "app.manifest"
+
+// 加入以下 VERSIONINFO 區塊
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          0x40004L
+FILETYPE        0x1L
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404b0"  // 0404 代表繁體中文 (台灣)，04b0 代表 Unicode 碼位
+        BEGIN
+            VALUE "CompanyName",      "您的公司或組織名稱"
+            VALUE "FileDescription",  "Memory Optimizer"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "MemoryOptimizer.exe"
+            VALUE "LegalCopyright",   "©2026 DU,MENG-HUAN. All rights reserved."
+            VALUE "OriginalFilename", "MemoryOptimizer.exe"
+            VALUE "ProductName",      "Memory Optimizer"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0404, 1200  // 設定對應的語系代碼
+    END
+END
